@@ -32,13 +32,10 @@ module.exports = "<router-outlet></router-outlet>"
 /***/ }),
 
 /***/ "./src/app/app.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng_socket_io__ = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng_socket_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ng_socket_io__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -48,8 +45,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var ng_socket_io_1 = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var AppComponent = /** @class */ (function () {
     function AppComponent(socket) {
         this.socket = socket;
@@ -61,94 +59,82 @@ var AppComponent = /** @class */ (function () {
         });
     };
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        core_1.Component({
             selector: 'app-root',
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ng_socket_io__["Socket"]])
+        __metadata("design:paramtypes", [ng_socket_io_1.Socket])
     ], AppComponent);
     return AppComponent;
 }());
-
+exports.AppComponent = AppComponent;
 
 
 /***/ }),
 
 /***/ "./src/app/app.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__usermanager_service__ = __webpack_require__("./src/app/usermanager.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng_socket_io__ = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng_socket_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng_socket_io__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__chat_chat_component__ = __webpack_require__("./src/app/chat/chat.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__login_login_component__ = __webpack_require__("./src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_route__ = __webpack_require__("./src/app/app.route.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__dashboard_dashboard_component__ = __webpack_require__("./src/app/dashboard/dashboard.component.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var usermanager_service_1 = __webpack_require__("./src/app/usermanager.service.ts");
+var platform_browser_1 = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var ng_socket_io_1 = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
+var app_component_1 = __webpack_require__("./src/app/app.component.ts");
+var chat_component_1 = __webpack_require__("./src/app/chat/chat.component.ts");
+var login_component_1 = __webpack_require__("./src/app/login/login.component.ts");
+var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+var app_route_1 = __webpack_require__("./src/app/app.route.ts");
+var dashboard_component_1 = __webpack_require__("./src/app/dashboard/dashboard.component.ts");
 var config = { url: '/', options: {} };
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
+        core_1.NgModule({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__chat_chat_component__["a" /* ChatComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__dashboard_dashboard_component__["a" /* DashboardComponent */]
+                app_component_1.AppComponent,
+                chat_component_1.ChatComponent,
+                login_component_1.LoginComponent,
+                dashboard_component_1.DashboardComponent
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_forms__["d" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_8__angular_router__["b" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_9__app_route__["a" /* routes */], { useHash: true }),
-                __WEBPACK_IMPORTED_MODULE_4_ng_socket_io__["SocketIoModule"].forRoot(config)
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                forms_1.ReactiveFormsModule,
+                router_1.RouterModule.forRoot(app_route_1.routes, { useHash: true }),
+                ng_socket_io_1.SocketIoModule.forRoot(config)
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_0__usermanager_service__["a" /* UsermanagerService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+            providers: [usermanager_service_1.UsermanagerService],
+            bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
     return AppModule;
 }());
-
+exports.AppModule = AppModule;
 
 
 /***/ }),
 
 /***/ "./src/app/app.route.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dashboard_dashboard_component__ = __webpack_require__("./src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_login_component__ = __webpack_require__("./src/app/login/login.component.ts");
 
-
-var routes = [
+Object.defineProperty(exports, "__esModule", { value: true });
+var dashboard_component_1 = __webpack_require__("./src/app/dashboard/dashboard.component.ts");
+var login_component_1 = __webpack_require__("./src/app/login/login.component.ts");
+exports.routes = [
     {
         path: '',
         pathMatch: 'full',
@@ -156,10 +142,10 @@ var routes = [
     },
     {
         path: 'login',
-        component: __WEBPACK_IMPORTED_MODULE_1__login_login_component__["a" /* LoginComponent */]
+        component: login_component_1.LoginComponent
     }, {
         path: 'dashboard',
-        component: __WEBPACK_IMPORTED_MODULE_0__dashboard_dashboard_component__["a" /* DashboardComponent */]
+        component: dashboard_component_1.DashboardComponent
     }
 ];
 
@@ -169,25 +155,22 @@ var routes = [
 /***/ "./src/app/chat/chat.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row m-0\">\r\n\t<div class=\"col-md-12 p-0\">\r\n\t\t<div class=\"chat-box\">\r\n\t\t\t<div class=\"convo-sec\" id='con' >\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t\r\n\t\t\t\t\t<li *ngFor='let i of sendlist' [class]='i.type'>\r\n\t\t\t\t\t\t<p>{{i.msg}}</p>\r\n\t\t\t\t\t\t<span class=\"date\">{{date | date:'hh:mm'}} | {{date |date:' d MMM,yy'}}</span>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div class='text-box'>\r\n\r\n\t\t\t\t<div class=\"input-area\">\r\n\t\t\t\t\t<form name=\"chat-form\">\r\n\t\t\t\t\t\t<input type='text' placeholder=\"Type your message here...\" [(ngModel)]='message' name=\"message\" autocomplete=\"off\"\t>\r\n\t\t\t\t\t\t<div class=\"btn-sec\">\r\n\t\t\t\t\t\t\t<button (click)='sendMessage()' type=\"submit\" class=\"btn btn-custom black\">Send</button>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n"
+module.exports = "<div class=\"row m-0\">\r\n\t<div class=\"col-md-12 p-0\" (click)='resetCounter()'>\r\n\t\t<div class=\"chat-box\">\r\n\t\t\t<div class=\"convo-sec\" id='con' >\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t\r\n\t\t\t\t\t<li *ngFor='let i of sendlist' [class]='i.type'>\r\n\t\t\t\t\t\t<p>{{i.msg}}</p>\r\n\t\t\t\t\t\t<span class=\"date\">{{date | date:'hh:mm'}} | {{date |date:' d MMM,yy'}}</span>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div class='text-box'>\r\n\r\n\t\t\t\t<div class=\"input-area\">\r\n\t\t\t\t\t<form name=\"chat-form\">\r\n\t\t\t\t\t\t<input type='text' placeholder=\"Type your message here...\" [(ngModel)]='message' name=\"message\" autocomplete=\"off\"\t>\r\n\t\t\t\t\t\t<div class=\"btn-sec\">\r\n\t\t\t\t\t\t\t<button (click)='sendMessage()' type=\"submit\" class=\"btn btn-custom black\">Send</button>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/chat/chat.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".chat-box {\n  border: 1px solid #ccc;\n  position: relative;\n  height: 100vh; }\n  .chat-box .convo-sec {\n    padding-top: 15px;\n    height: 334px;\n    overflow: auto; }\n  .chat-box .convo-sec ul {\n      padding-left: 13px; }\n  .chat-box .convo-sec li {\n      display: block;\n      padding: 10px;\n      border-radius: 10px;\n      max-width: 60%;\n      width: auto;\n      min-width: 20%;\n      position: relative;\n      clear: both;\n      margin-bottom: 15px; }\n  .chat-box .convo-sec li.send {\n        float: right;\n        background: #eee;\n        margin-right: 13px; }\n  .chat-box .convo-sec li.recieve {\n        float: left;\n        border: 1px solid rgba(153, 153, 153, 0.58); }\n  .chat-box .convo-sec li .date {\n        position: absolute;\n        right: 0px;\n        font-size: 12px;\n        color: rgba(51, 51, 51, 0.8);\n        bottom: -20px; }\n  .chat-box .convo-sec li h4 {\n        float: left;\n        margin: 0px;\n        margin-right: 20px;\n        font-size: 15px;\n        font-weight: 600; }\n  .chat-box .convo-sec li p {\n        clear: both;\n        word-wrap: break-word;\n        margin: 5px 0px; }\n  .chat-box .text-box {\n    position: absolute;\n    left: 0px;\n    bottom: 0px;\n    width: 100%;\n    background: #eee;\n    padding: 10px; }\n  .chat-box .text-box .input-area input[type=text] {\n      border: none;\n      display: inline-block;\n      padding: 8px 15px;\n      width: 90%; }\n  .chat-box .text-box .input-area input[type=text]:focus {\n        outline: none; }\n  .chat-box .text-box .input-area input[type=file] {\n      display: none; }\n  .chat-box .text-box .btn-sec {\n      display: inline-block;\n      width: 8%;\n      padding: 7px 0px;\n      margin-left: -3px; }\n  .chat-box .text-box .btn-sec .btn-custom.black {\n        padding: 6.5px 30px; }\n  .chat-box .text-box .btn-sec img {\n        width: 15px; }\n  .chat-box .text-box .btn-sec a {\n        margin: 0px 3px; }\n  .chat-box .text-box .btn-sec a label {\n          padding: 0px;\n          cursor: pointer;\n          display: inline; }\n  .chat-box .text-box .btn-sec .send-btn {\n        background: none;\n        border: none;\n        margin-left: 5px;\n        border-left: 1px solid #ccc; }\n"
+module.exports = ".chat-box {\n  border: 1px solid #ccc;\n  position: relative;\n  height: 100vh; }\n  .chat-box .convo-sec {\n    padding-top: 15px;\n    height: 86vh;\n    overflow: auto; }\n  .chat-box .convo-sec ul {\n      padding-left: 13px; }\n  .chat-box .convo-sec li {\n      display: block;\n      padding: 10px;\n      border-radius: 10px;\n      max-width: 60%;\n      width: auto;\n      min-width: 20%;\n      position: relative;\n      clear: both;\n      margin-bottom: 40px; }\n  .chat-box .convo-sec li.send {\n        float: right;\n        background: #eee;\n        margin-right: 13px; }\n  .chat-box .convo-sec li.recieve {\n        float: left;\n        border: 1px solid rgba(153, 153, 153, 0.58); }\n  .chat-box .convo-sec li .date {\n        position: absolute;\n        right: 0px;\n        font-size: 12px;\n        color: rgba(51, 51, 51, 0.8);\n        bottom: -20px; }\n  .chat-box .convo-sec li h4 {\n        float: left;\n        margin: 0px;\n        margin-right: 20px;\n        font-size: 15px;\n        font-weight: 600; }\n  .chat-box .convo-sec li p {\n        clear: both;\n        word-wrap: break-word;\n        margin: 5px 0px; }\n  .chat-box .text-box {\n    position: absolute;\n    left: 0px;\n    bottom: 0px;\n    width: 100%;\n    background: #eee;\n    padding: 10px; }\n  .chat-box .text-box .input-area input[type=text] {\n      border: none;\n      display: inline-block;\n      padding: 8px 15px;\n      width: 90%; }\n  .chat-box .text-box .input-area input[type=text]:focus {\n        outline: none; }\n  .chat-box .text-box .input-area input[type=file] {\n      display: none; }\n  .chat-box .text-box .btn-sec {\n      display: inline-block;\n      width: 8%;\n      padding: 7px 0px;\n      margin-left: -3px; }\n  .chat-box .text-box .btn-sec .btn-custom.black {\n        padding: 6.5px 30px; }\n  .chat-box .text-box .btn-sec img {\n        width: 15px; }\n  .chat-box .text-box .btn-sec a {\n        margin: 0px 3px; }\n  .chat-box .text-box .btn-sec a label {\n          padding: 0px;\n          cursor: pointer;\n          display: inline; }\n  .chat-box .text-box .btn-sec .send-btn {\n        background: none;\n        border: none;\n        margin-left: 5px;\n        border-left: 1px solid #ccc; }\n"
 
 /***/ }),
 
 /***/ "./src/app/chat/chat.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng_socket_io__ = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng_socket_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ng_socket_io__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -197,13 +180,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var ng_socket_io_1 = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var ChatComponent = /** @class */ (function () {
     function ChatComponent(socket) {
         this.socket = socket;
         this.sendlist = [];
         this.recieveList = [];
+        this.unreadMessages = new core_1.EventEmitter();
+        this.resetMsgCounter = new core_1.EventEmitter(false);
     }
     ChatComponent.prototype.sendMessage = function () {
         if (this.message != '') {
@@ -216,12 +202,18 @@ var ChatComponent = /** @class */ (function () {
             this.message = '';
         }
     };
+    ChatComponent.prototype.resetCounter = function () {
+        this.resetMsgCounter.emit(true);
+    };
     ChatComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.socket.fromEvent('chat message').subscribe(function (data) {
             console.log('data', data);
             _this.date = Date.now();
             _this.sendlist.push({ msg: data, type: 'recieve' });
+            _this.unreadMessages.emit(1);
+            var objDiv = document.getElementById("con");
+            setTimeout(function () { objDiv.scrollTop = objDiv.scrollHeight; }, 100);
         });
         this.opts = {
             position: 'right',
@@ -232,20 +224,28 @@ var ChatComponent = /** @class */ (function () {
         };
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
+        core_1.Input(),
         __metadata("design:type", Object)
     ], ChatComponent.prototype, "selectedUser", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], ChatComponent.prototype, "unreadMessages", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], ChatComponent.prototype, "resetMsgCounter", void 0);
     ChatComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        core_1.Component({
             selector: 'app-chat',
             template: __webpack_require__("./src/app/chat/chat.component.html"),
             styles: [__webpack_require__("./src/app/chat/chat.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ng_socket_io__["Socket"]])
+        __metadata("design:paramtypes", [ng_socket_io_1.Socket])
     ], ChatComponent);
     return ChatComponent;
 }());
-
+exports.ChatComponent = ChatComponent;
 
 
 /***/ }),
@@ -253,26 +253,22 @@ var ChatComponent = /** @class */ (function () {
 /***/ "./src/app/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='container-fluid'>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3 sidebar\">\r\n      <div class=\"profile-user\">\r\n        <h4>{{activeUser}}</h4>\r\n      </div>\r\n      <ul>\r\n        <li *ngFor='let user of users' (click)='selectedUser(user)' [ngClass]='{\"active\":user==sUser}'>{{user.username}}</li>\r\n      </ul>\r\n    </div>\r\n    <div class=\"col-md-9 p-0\">\r\n      <app-chat [selectedUser]='sUser'></app-chat>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div class='container-fluid'>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3 sidebar\">\r\n      <div class=\"profile-user\">\r\n        <h4>{{activeUser}}</h4>\r\n      </div>\r\n      <ul>\r\n        <li *ngFor='let user of users' (click)='selectedUser(user)' [ngClass]='{\"active\":user==sUser}'>{{user.username}} <span class=\"badge badge-info pull-right\" [hidden]='messagesUnread<=0'>{{messagesUnread}}</span></li>\r\n      </ul>\r\n    </div>\r\n    <div class=\"col-md-9 p-0\">\r\n      <app-chat [selectedUser]='sUser' (unreadMessages)='unreadMessages($event)' (resetMsgCounter)='resetCounter($event)'></app-chat>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
 /***/ "./src/app/dashboard/dashboard.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".sidebar {\n  background: #fafafa;\n  padding: 0px; }\n  .sidebar .profile-user {\n    background: #39ca78;\n    padding: 20px; }\n  .sidebar .profile-user h4 {\n      color: #fff;\n      text-transform: capitalize;\n      font-weight: 400; }\n  .sidebar ul {\n    padding: 0px;\n    margin: 10px 0px; }\n  .sidebar ul li {\n      display: block;\n      padding: 20px;\n      text-transform: capitalize;\n      font-weight: 400;\n      border-top: 1px solid #eee;\n      border-bottom: 1px solid #eee; }\n  .sidebar ul li:hover {\n        background: #eee;\n        cursor: pointer; }\n  .sidebar ul li.active {\n        background: #f1f1f1;\n        color: #39ca78; }\n"
+module.exports = ".sidebar {\n  background: #fafafa;\n  padding: 0px; }\n  .sidebar .profile-user {\n    background: #1aceb5;\n    padding: 20px; }\n  .sidebar .profile-user h4 {\n      color: #fff;\n      text-transform: capitalize;\n      font-weight: 400; }\n  .sidebar ul {\n    padding: 0px;\n    margin: 10px 0px; }\n  .sidebar ul li {\n      display: block;\n      padding: 20px;\n      text-transform: capitalize;\n      font-weight: 400;\n      border-top: 1px solid #eee;\n      border-bottom: 1px solid #eee; }\n  .sidebar ul li:hover {\n        background: #eee;\n        cursor: pointer; }\n  .sidebar ul li.active {\n        background: #f1f1f1;\n        color: #1aceb5; }\n"
 
 /***/ }),
 
 /***/ "./src/app/dashboard/dashboard.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng_socket_io__ = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng_socket_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ng_socket_io__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__usermanager_service__ = __webpack_require__("./src/app/usermanager.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -282,14 +278,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var ng_socket_io_1 = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
+var usermanager_service_1 = __webpack_require__("./src/app/usermanager.service.ts");
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent(userManager, socket) {
         this.userManager = userManager;
         this.socket = socket;
         this.users = [];
+        this.messagesUnread = 0;
         this.disconnectuser();
         var user = JSON.parse(sessionStorage.getItem('userData'));
         this.activeUser = user.username;
@@ -312,6 +310,7 @@ var DashboardComponent = /** @class */ (function () {
     };
     DashboardComponent.prototype.selectedUser = function (user) {
         this.sUser = user;
+        this.messagesUnread = 0;
     };
     DashboardComponent.prototype.disconnectuser = function () {
         var _this = this;
@@ -320,17 +319,26 @@ var DashboardComponent = /** @class */ (function () {
             _this.getUsers();
         });
     };
+    DashboardComponent.prototype.resetCounter = function (flag) {
+        if (flag) {
+            this.messagesUnread = 0;
+        }
+    };
+    DashboardComponent.prototype.unreadMessages = function (num) {
+        console.log(num);
+        this.messagesUnread += num;
+    };
     DashboardComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+        core_1.Component({
             selector: 'app-dashboard',
             template: __webpack_require__("./src/app/dashboard/dashboard.component.html"),
             styles: [__webpack_require__("./src/app/dashboard/dashboard.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__usermanager_service__["a" /* UsermanagerService */], __WEBPACK_IMPORTED_MODULE_0_ng_socket_io__["Socket"]])
+        __metadata("design:paramtypes", [usermanager_service_1.UsermanagerService, ng_socket_io_1.Socket])
     ], DashboardComponent);
     return DashboardComponent;
 }());
-
+exports.DashboardComponent = DashboardComponent;
 
 
 /***/ }),
@@ -350,17 +358,10 @@ module.exports = ".account {\n  font-family: 'Montserrat', sans-serif;\n  height
 /***/ }),
 
 /***/ "./src/app/login/login.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__usermanager_service__ = __webpack_require__("./src/app/usermanager.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng_socket_io__ = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng_socket_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng_socket_io__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -370,12 +371,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var usermanager_service_1 = __webpack_require__("./src/app/usermanager.service.ts");
+var ng_socket_io_1 = __webpack_require__("./node_modules/ng-socket-io/dist/index.js");
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
 var LoginComponent = /** @class */ (function () {
     function LoginComponent(router, socket, userManager) {
         this.router = router;
@@ -386,8 +388,8 @@ var LoginComponent = /** @class */ (function () {
         this.initializeForm();
     };
     LoginComponent.prototype.initializeForm = function () {
-        this.loginForm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormGroup */]({
-            email: new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].required)
+        this.loginForm = new forms_1.FormGroup({
+            email: new forms_1.FormControl('', forms_1.Validators.required)
             // password:new FormControl('',Validators.required),
         });
     };
@@ -424,26 +426,25 @@ var LoginComponent = /** @class */ (function () {
         }
     };
     LoginComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+        core_1.Component({
             selector: 'app-login',
             template: __webpack_require__("./src/app/login/login.component.html"),
             styles: [__webpack_require__("./src/app/login/login.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_1_ng_socket_io__["Socket"], __WEBPACK_IMPORTED_MODULE_0__usermanager_service__["a" /* UsermanagerService */]])
+        __metadata("design:paramtypes", [router_1.Router, ng_socket_io_1.Socket, usermanager_service_1.UsermanagerService])
     ], LoginComponent);
     return LoginComponent;
 }());
-
+exports.LoginComponent = LoginComponent;
 
 
 /***/ }),
 
 /***/ "./src/app/usermanager.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsermanagerService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -453,7 +454,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var UsermanagerService = /** @class */ (function () {
     function UsermanagerService() {
     }
@@ -473,26 +475,27 @@ var UsermanagerService = /** @class */ (function () {
         users.splice(users.indexOf(user), 1);
     };
     UsermanagerService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        core_1.Injectable(),
         __metadata("design:paramtypes", [])
     ], UsermanagerService);
     return UsermanagerService;
 }());
-
+exports.UsermanagerService = UsermanagerService;
 
 
 /***/ }),
 
 /***/ "./src/environments/environment.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-var environment = {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.environment = {
     production: false
 };
 
@@ -500,22 +503,19 @@ var environment = {
 /***/ }),
 
 /***/ "./src/main.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var platform_browser_dynamic_1 = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
+var app_module_1 = __webpack_require__("./src/app/app.module.ts");
+var environment_1 = __webpack_require__("./src/environments/environment.ts");
+if (environment_1.environment.production) {
+    core_1.enableProdMode();
 }
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
+platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule)
     .catch(function (err) { return console.log(err); });
 
 

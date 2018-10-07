@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   users: any =[];
   sUser: any;
   activeUser;
+  messagesUnread: any = 0;
   constructor(private userManager:UsermanagerService, private socket:Socket) { 
     this.disconnectuser();
     var user =JSON.parse(sessionStorage.getItem('userData'));
@@ -34,11 +35,21 @@ export class DashboardComponent implements OnInit {
   }
   selectedUser(user){
     this.sUser = user;
+    this.messagesUnread = 0;
   }
   disconnectuser(){
     this.socket.fromEvent<any>('userDisconnected').subscribe(user=>{
       this.userManager.disconnectUser(user);
       this.getUsers();
     })
+  }
+  resetCounter(flag){
+    if(flag){
+      this.messagesUnread = 0;
+    }
+  }
+  unreadMessages(num){
+    console.log(num);
+    this.messagesUnread += num;
   }
 }

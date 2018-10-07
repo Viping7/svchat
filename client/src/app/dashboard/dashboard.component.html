@@ -5,11 +5,11 @@
         <h4>{{activeUser}}</h4>
       </div>
       <ul>
-        <li *ngFor='let user of users' (click)='selectedUser(user)' [ngClass]='{"active":user==sUser}'>{{user.username}}</li>
+        <li *ngFor='let user of users' (click)='selectedUser(user)' [ngClass]='{"active":user==sUser}'>{{user.username}} <span class="badge badge-info pull-right" [hidden]='messagesUnread<=0'>{{messagesUnread}}</span></li>
       </ul>
     </div>
     <div class="col-md-9 p-0">
-      <app-chat [selectedUser]='sUser'></app-chat>
+      <app-chat [selectedUser]='sUser' (unreadMessages)='unreadMessages($event)' (resetMsgCounter)='resetCounter($event)'></app-chat>
     </div>
   </div>
 </div>

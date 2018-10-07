@@ -1,5 +1,5 @@
 import { Socket } from 'ng-socket-io';
-import { Component, OnInit, Input, SimpleChanges, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, AfterViewChecked, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-chat',
@@ -14,6 +14,8 @@ export class ChatComponent implements OnInit {
  sendlist=[];
  recieveList =[];
  @Input() selectedUser;
+ @Output() unreadMessages = new EventEmitter();
+ @Output() resetMsgCounter = new EventEmitter(false);
 sendMessage(){
 	if(this.message!=''){
 		this.date=Date.now();
@@ -26,12 +28,17 @@ sendMessage(){
 	}
 
 }
+resetCounter(){
+	this.resetMsgCounter.emit(true);
+}
 	ngOnInit() {
-		
 	this.socket.fromEvent<any>('chat message').subscribe(data=>{
 		console.log('data',data);
 		this.date=Date.now();
 		this.sendlist.push({msg:data,type:'recieve'});
+		this.unreadMessages.emit(1);
+		var objDiv = document.getElementById("con");
+		setTimeout(() => {objDiv.scrollTop = objDiv.scrollHeight},100);
 	})
     this.opts = {
       position: 'right',
