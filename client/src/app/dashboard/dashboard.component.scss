@@ -1,0 +1,35 @@
+@import '../../assets/scss/variables';
+
+.sidebar{
+  background: #fafafa;
+  padding: 0px;  
+  .profile-user{
+      background: $primary-color;
+      padding: 20px;
+      h4{
+          color: #fff;
+          text-transform: capitalize;
+          font-weight: 400;
+      }
+  }
+ul{
+    padding: 0px;
+    margin:10px 0px; 
+    li{
+        display: block;
+        padding: 20px;
+        text-transform: capitalize;
+        font-weight: 400;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        &:hover{
+            background: #eee;
+            cursor: pointer;
+        }
+        &.active{
+            background: #f1f1f1;
+            color:$primary-color;
+        }
+    }
+}
+}

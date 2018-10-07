@@ -1,0 +1,26 @@
+<div class="row m-0">
+	<div class="col-md-12 p-0">
+		<div class="chat-box">
+			<div class="convo-sec" id='con' >
+				<ul>
+					
+					<li *ngFor='let i of sendlist' [class]='i.type'>
+						<p>{{i.msg}}</p>
+						<span class="date">{{date | date:'hh:mm'}} | {{date |date:' d MMM,yy'}}</span>
+					</li>
+				</ul>
+			</div>
+			<div class='text-box'>
+
+				<div class="input-area">
+					<form name="chat-form">
+						<input type='text' placeholder="Type your message here..." [(ngModel)]='message' name="message" autocomplete="off"	>
+						<div class="btn-sec">
+							<button (click)='sendMessage()' type="submit" class="btn btn-custom black">Send</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<div class='container-fluid'>
+  <div class="row">
+    <div class="col-md-3 sidebar">
+      <div class="profile-user">
+        <h4>{{activeUser}}</h4>
+      </div>
+      <ul>
+        <li *ngFor='let user of users' (click)='selectedUser(user)' [ngClass]='{"active":user==sUser}'>{{user.username}}</li>
+      </ul>
+    </div>
+    <div class="col-md-9 p-0">
+      <app-chat [selectedUser]='sUser'></app-chat>
+    </div>
+  </div>
+</div>

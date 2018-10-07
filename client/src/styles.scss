@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/variables';
+body{
+    font-family: 'Montserrat', sans-serif;
+    background:  #fafafa;
+}
+.table-display{
+    height: 100vh;
+    display: table;
+    width: 100%;
+}
+.btn-custom{
+    border-radius: 0px;
+    padding: 10px 30px;
+    color: #333;
+    background: #f1f1f1;
+    &.black{
+        background: #333;
+        color:#fff;
+        &:hover{
+            background: #555
+        }
+    }
+}
+.btn:focus, .btn.focus{
+    box-shadow: none;
+}
+.clear{
+    clear: both;
+}
+.login-signup{
+    padding: 0px 20px;
+    a{
+        text-decoration: none;
+        &:hover{
+            span{
+                color:#333;
+            }   
+        }
+    }
+    .p-0{
+        padding-left: 0px;
+    }
+    .m-0{
+        margin: 0px;
+    }
+.align-middle{
+    display: table-cell;
+    span{
+        color: $primary-color;
+    }
+    h2{
+        margin-bottom: 50px;
+        font-size: 24px;
+       
+    }
+    h3{
+        margin-bottom: 50px;
+        font-size: 16px;
+       
+    }
+    label{
+        font-weight: 400;
+    }
+    .form-group{
+        margin-bottom: 20px;
+    }
+    .form-control{
+        background: #fff;
+        border:none;
+        width: 80%;
+        height:50px;
+        border-radius:0;
+        &:focus{
+            outline: none !important;
+            border:1px solid $primary-color;
+            box-shadow: none;
+        }
+    }
+    .btn-custom{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding: 13px 55px;
+    }
+}
+p {
+    &.error{
+        color: #ea2828;
+        font-size: 13px;
+        margin-top: 4px;
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+}
+}
+.navbar{
+    svg{
+        width: 20px;
+        height: 20px;
+        path{
+            fill:#999;
+        }
+    }
+}
+.sidebar{
+    .user-links{
+        ul{
+            li{
+                a{
+                    border-left: 2px solid transparent;
+                    svg{
+                        vertical-align: middle;
+                        width:20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    path{
+                        fill:#666;
+                    }
+                    }
+                    &:hover, &.active{
+                        background: rgba(83, 198, 118, 0.0784313725490196);
+                        text-decoration: none;
+                        border-left-color: $primary-color;
+                        color: #39ca78 !important;
+                        .svgImage{
+                            path, circle, rect{
+                                fill: $primary-color;
+                            }
+                        } 
+                    }
+                }
+            }
+        }  
+    }
+}
